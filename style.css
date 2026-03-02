@@ -1,398 +1,403 @@
 /* ===== Reset ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background-color: #141414;
-  color: #fff;
-  overflow-x: hidden;
+body{
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
 }
 
 /* ===== Header ===== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  background: linear-gradient(to bottom, rgba(20,20,20,0.9), rgba(20,20,20,0));
-  transition: background 0.3s ease;
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  transition:0.3s ease;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.85), transparent);
 }
 
-header.scrolled {
-  background: rgba(20,20,20,0.95);
+header.scrolled{
+  background:#000;
 }
 
-header .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #e50914;
+.logo{
+  color:#e50914;
+  font-size:2rem;
+  font-weight:bold;
 }
 
-header nav ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
+.header-right{
+  display:flex;
+  gap:15px;
 }
 
-header nav ul li {
-  cursor: pointer;
-  font-weight: 500;
-  transition: color 0.3s;
+select{
+  padding:6px 10px;
+  background:transparent;
+  color:white;
+  border:1px solid #777;
 }
 
-header nav ul li:hover {
-  color: #e50914;
+.sign-in{
+  background:#e50914;
+  border:none;
+  padding:7px 18px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:4px;
+  transition:0.3s;
 }
 
-header .icons span {
-  margin-left: 20px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: transform 0.3s;
-}
-
-header .icons span:hover {
-  transform: scale(1.2);
+.sign-in:hover{
+  background:#f40612;
 }
 
 /* ===== Hero Section ===== */
-.hero {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  text-align: center; 
-  padding: 0 20px;
-  margin-top: 80px;
-  background-size: cover;
+.hero{
+  height:90vh;
+  background:url("images/netflix.jpg") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  padding:0 20px;
+  overflow:hidden;
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(to top, rgba(20,20,20,1), rgba(20,20,20,0));
-  z-index: 0;
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:750px;
 }
 
-.hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 15px;
-  display: inline-block;
-  position: relative;
+.hero-content h1{
+  font-size:3.8rem;
+  margin-bottom:20px;
+  font-weight:800;
 }
 
-/* Hero red circle */
-.hero-content h1::after {
-  content: '';
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #e50914;
-  border-radius: 50%;
-  margin: 10px auto 0 auto;
+.hero-content h3{
+  font-size:1.6rem;
+  margin-bottom:20px;
+  font-weight:400;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-} 
-/* ===== Hero Heading Circle ===== */
-.hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 15px;
-  display: inline-block;
-  position: relative;
-  text-align: center;
+.hero-content p{
+  margin-bottom:20px;
 }
 
-/* Small red circle below hero heading */
-.hero-content h1::after {
-  content: '';
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #e50914;
-  border-radius: 50%;
-  margin: 10px auto 0 auto; /* centers the circle */
+/* ===== Email Box ===== */
+.email-box{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
 }
 
-/* ===== Movies Row Heading Circle ===== */
-.movies-row h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-  text-align: center;
+.email-box input{
+  padding:15px;
+  width:320px;
+  border:none;
+  outline:none;
+  border-radius:4px;
 }
 
-/* Small red circle below movies row heading */
-.movies-row h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 12px;
-  background-color: #e50914;
-  border-radius: 50%;
+.email-box button{
+  background:#e50914;
+  border:none;
+  padding:15px 28px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:4px;
+  transition:0.3s;
 }
 
-/* Hero Buttons */
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 15px;
+.email-box button:hover{
+  background:#f40612;
 }
 
-.hero-buttons button {
-  padding: 12px 25px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  border: none;
-  transition: all 0.3s;
+/* =============================== */
+/* 🔥 PERFECT NETFLIX CURVE */
+/* =============================== */
+
+.top-curve{
+  position:absolute;
+  bottom:-75px;   /* Trending ke just upar */
+  left:50%;
+  transform:translateX(-50%);
+  width:1449.6px;
+  height:150px;
+  pointer-events:none;
+  z-index:5;
+
+  /* subtle burn light */
+  filter: drop-shadow(0 20px 40px rgba(229,9,20,0.15));
 }
 
-.hero-buttons .play {
-  background-color: #fff;
-  color: #000;
+/* Black curve */
+.top-curve::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:280px;
+  top:-190px;
+  background:#000;
+  border-radius:50%;
 }
 
-.hero-buttons .play:hover {
-  background-color: #e6e6e6;
+/* Red glowing arc */
+.top-curve::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:280px;
+  top:-200px;
+  border-radius:50%;
+  border-top:4px solid #e50914;
+
+  box-shadow:
+    0 0 25px rgba(229,9,20,0.9),
+    0 0 60px rgba(229,9,20,0.7),
+    0 0 120px rgba(229,9,20,0.4);
 }
 
-.hero-buttons .info {
-  background-color: rgba(109,109,110,0.7);
-  color: #fff;
+/* ===== TRENDING SECTION ===== */
+.trending{
+  background:#000;
+  padding:130px 60px 60px 60px;
+  margin-top:-30px; /* smooth connect */
+  position:relative;
 }
 
-.hero-buttons .info:hover {
-  background-color: rgba(109,109,110,0.9);
+.trending h2{
+  margin-bottom:30px;
+  font-size:2rem;
+  font-weight:700;
 }
 
-/* Get Started Button */
-.hero-content button.get-started {
-  padding: 15px 35px;
-  background-color: #e50914;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s;
+.row-posters{
+  display:flex;
+  gap:22px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  padding-bottom:20px;
 }
 
-.hero-content button.get-started:hover {
-  background-color: #f40612;
+.row-posters::-webkit-scrollbar{
+  display:none;
 }
 
-/* ===== Movies Row ===== */
-.movies-row {
-  margin: 50px 20px;
+.movie-card{
+  width:200px;
+  height:295px;
+  flex:0 0 auto;
+  transition:0.3s ease;
+  position:relative;
 }
 
-.movies-row h2 {
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
+.movie-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:14px;
 }
 
-.movies-row h2::after {
-  content: '';
-  display: block;
-  width: 12px;
-  height: 12px;
-  background-color: #e50914;
-  border-radius: 50%;
-  margin: 8px auto 0 auto;
+.movie-card:hover{
+  transform:scale(1.08);
+  z-index:10;
 }
 
-.row-posters {
-  display: flex;
-  gap: 15px;
-  overflow-x: scroll;
-  padding-bottom: 10px;
-  scroll-behavior: smooth;
+.rank{
+  position:absolute;
+  bottom:-20px;
+  left:-12px;
+  font-size:110px;
+  font-weight:900;
+  color:transparent;
+  -webkit-text-stroke:3px white;
+  opacity:0.9;
+  pointer-events:none;
 }
 
-.row-posters::-webkit-scrollbar {
-  display: none;
+/* ===== MORE REASONS ===== */
+.reasons{
+  background:radial-gradient(circle at top left, #141414, #000);
+  padding:90px 60px;
+  border-top:8px solid #000;
 }
 
-.row-posters img {
-  width: 200px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s, opacity 0.3s;
+.reason-container{
+  display:flex;
+  gap:25px;
+  margin-top:50px;
+  flex-wrap:wrap;
 }
 
-.row-posters img:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
+.reason-card{
+  flex:1;
+  min-width:260px;
+  background:linear-gradient(145deg, #1c1c1c, #0f0f0f);
+  padding:35px;
+  border-radius:18px;
+  transition:0.3s ease;
+  border:1px solid #222;
 }
 
-/* ===== Subscription Section ===== */
-.subscription {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #141414;
+.reason-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.7);
 }
 
-.subscription h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  max-width: 600px;
-  line-height: 1.4;
+.reason-card h3{
+  margin-bottom:15px;
+  font-size:1.3rem;
 }
 
-.subscription p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-  max-width: 600px;
+/* ===== FAQ ===== */
+.faq{
+  padding:100px 20px;
+  border-top:8px solid #222;
+  text-align:center;
 }
 
-.subscription input[type="email"] {
-  padding: 15px 20px;
-  width: 350px;
-  max-width: 90%;
-  border-radius: 5px;
-  border: none;
-  margin-bottom: 20px;
-  font-size: 1rem;
+.faq h2{
+  font-size:2.7rem;
+  margin-bottom:40px;
 }
 
-.subscription button.get-started {
-  padding: 15px 35px;
-  background-color: #e50914;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s;
+.faq-item{
+  max-width:850px;
+  margin:12px auto;
+  background:#303030;
+  transition:0.3s;
 }
 
-.subscription button.get-started:hover {
-  background-color: #f40612;
+.faq-item:hover{
+  background:#3a3a3a;
 }
 
-/* ===== FAQ Section ===== */
-.faq {
-  padding: 50px 20px;
-  max-width: 900px;
-  margin: auto;
+.faq-item h3{
+  padding:22px;
+  cursor:pointer;
+  text-align:left;
 }
 
-.faq h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  text-align: center;
+.faq-answer{
+  display:none;
+  padding:22px;
+  text-align:left;
+  border-top:1px solid #000;
 }
 
-.faq-item {
-  margin-bottom: 15px;
-  background-color: #222;
-  border-radius: 5px;
-  padding: 15px 20px;
-  cursor: pointer;
+.faq-item.active .faq-answer{
+  display:block;
 }
 
-.faq-item h3 {
-  position: relative;
-}
-
-.faq-item p {
-  display: none;
-  margin-top: 10px;
-}
-
-.faq-item.active p {
-  display: block;
+.email-bottom{
+  margin-top:50px;
 }
 
 /* ===== Footer ===== */
-footer {
-  background-color: #000;
-  color: #999;
-  padding: 40px 20px;
-  font-size: 14px;
+footer{
+  padding:60px 10%;
+  border-top:8px solid #222;
+  color:#999;
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:60px;
+  margin:30px 0;
 }
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+footer ul{
+  list-style:none;
 }
 
-.footer-column ul {
-  list-style: none;
+footer li{
+  margin-bottom:12px;
+  cursor:pointer;
+  font-size:0.9rem;
 }
 
-.footer-column li {
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: color 0.3s;
+footer li:hover{
+  text-decoration:underline;
 }
 
-.footer-column li:hover {
-  color: #fff;
+.country{
+  margin-top:25px;
 }
 
 /* ===== Responsive ===== */
-@media screen and (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
+@media(max-width:1500px){
+  .top-curve{
+    width:95%;
+  }
+}
+
+@media(max-width:768px){
+
+  header{
+    padding:20px;
   }
 
-  .hero-content p {
-    font-size: 1rem;
+  .hero-content h1{
+    font-size:2.2rem;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
+  .hero-content h3{
+    font-size:1.2rem;
   }
 
-  .row-posters img {
-    width: 150px;
+  .email-box{
+    flex-direction:column;
   }
 
-  .subscription input {
-    width: 90%;
+  .email-box input{
+    width:100%;
+  }
+
+  .movie-card{
+    width:150px;
+    height:220px;
+  }
+
+  .rank{
+    font-size:80px;
+  }
+
+  .reasons{
+    padding:70px 20px;
+  }
+
+  .top-curve{
+    width:100%;
+    bottom:-55px;
+  }
+
+  .trending{
+    padding-top:110px;
   }
 }
