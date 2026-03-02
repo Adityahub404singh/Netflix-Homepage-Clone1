@@ -1,40 +1,28 @@
-# Netflix Clone
+# Netflix Homepage Clone
 
-A modern **Netflix-inspired web application** built with **HTML, CSS, and JavaScript**.  
-This project replicates the look and feel of Netflix, featuring a hero section, movies carousel, subscription section, and footer.
-
----
-
-## **Project Description**
-
-This project is a **front-end clone of Netflix**, designed to provide a clean and responsive user interface for browsing movies and shows.  
-It is built using **pure HTML, CSS, and JavaScript** without any frameworks.  
-
-**Features include:**
-- Fixed header with navigation and user icons.
-- Hero section with featured movie and call-to-action buttons.
-- Small red circle under headings for aesthetic design.
-- Scrollable movie row with hover effects.
-- Subscription section for email input.
-- Responsive design for mobile devices.
-
-This project is perfect for learning **HTML/CSS layout, responsive design, and UI styling**.
+A modern, responsive *Netflix homepage clone* built with *HTML, CSS, and JavaScript*.  
+This project replicates the *look and feel of Netflix*, including a hero section, trending movies, reasons to join, FAQ, and footer with responsive design.
 
 ---
 
-## **Preview**
+## 🌐 Live Demo
 
-![Netflix Clone Preview](images/netflix-preview.jpg)
-
----
-
-## **Technologies Used**
-
-- HTML5
-- CSS3 (Flexbox, Grid)
-- JavaScript (for interactive buttons and hover effects)
-- Responsive design using media queries
+Check out the live version here:  
+[Netflix Homepage Clone](https://adityahub404singh.github.io/Netflix-Homepage-Clone1/)
 
 ---
 
-## **Project Structure**
+## 🛠 Features
+
+- *Responsive Header* with language selector and Sign In button  
+- *Hero Section* with overlay and email subscription form  
+- *Netflix Curve* for smooth transition between hero and trending sections  
+- *Trending Movies Section* with hover effects and scrollable movie cards  
+- *Reasons to Join Section* showcasing Netflix benefits  
+- *FAQ Accordion* with toggle effect  
+- *Footer* with multiple sections and links  
+- Fully *responsive design* for desktop, tablet, and mobile devices
+
+---
+
+## 📂 Project Structure
